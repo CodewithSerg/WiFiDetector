@@ -8,7 +8,27 @@
 import UIKit
 import SnapKit
 
+// MARK: - MainViewController
+
 class MainViewController: UIViewController {
+
+	lazy var layout: UICollectionViewFlowLayout = {
+		let layout = UICollectionViewFlowLayout()
+		layout.scrollDirection = .vertical
+		layout.minimumInteritemSpacing = 12
+		layout.minimumLineSpacing = 30
+		return layout
+	}()
+
+	lazy var collection: UICollectionView = {
+		let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+		collection.delegate = self
+		collection.collectionViewLayout = layout
+		collection.dataSource = self
+		collection.backgroundColor = .clear
+		collection.register(ActionCell.self, forCellWithReuseIdentifier: "actionCell")
+		return collection
+	}()
 
 	let currentNetworkView = CurrentNetworkView()
 
@@ -41,6 +61,7 @@ class MainViewController: UIViewController {
 		view.addSubview(scrollView)
 		scrollView.addSubview(imageView)
 		scrollView.addSubview(currentNetworkView)
+		scrollView.addSubview(collection)
 	}
 
 	private func setupConstraints() {
@@ -55,9 +76,49 @@ class MainViewController: UIViewController {
 			$0.top.equalToSuperview().offset(280)
 			$0.leading.trailing.equalToSuperview().inset(20)
 		}
+		collection.snp.makeConstraints {
+			$0.top.equalTo(currentNetworkView.snp.bottom).offset(16)
+			$0.leading.trailing.equalToSuperview().inset(36)
+			$0.height.equalTo(358)
+			$0.bottom.equalToSuperview()//.inset(20)
+		}
+	}
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension MainViewController: UICollectionViewDelegate {
+
+}
+
+// MARK: - UICollectionViewDataSource
+
+extension MainViewController: UICollectionViewDataSource {
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		4
 	}
 
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "actionCell", for: indexPath) as? ActionCell
+		cell?.configure(type: .bluetooth, imageStr: "bluetooth")
+		cell?.action = { [weak self] type in
+//			vm.didTap()
+			print(">>> tap cell \(type)")
+		}
+		return cell ?? UICollectionViewCell()
+	}
+}
 
+// MARK: - UICollectionViewDelegateFlowLayout
 
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+	func collectionView(
+		_ collectionView: UICollectionView,
+		layout collectionViewLayout: UICollectionViewLayout,
+		sizeForItemAt indexPath: IndexPath
+	) -> CGSize {
+		let width = (collectionView.frame.width - 20) / 2
+		return CGSize(width: width, height: width)
+	}
 }
 

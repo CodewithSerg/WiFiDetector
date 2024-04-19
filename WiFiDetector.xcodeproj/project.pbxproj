@@ -18,6 +18,7 @@
 		7AD8C7BA2BD270E000B1A7D2 /* CurrentNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8C7B92BD270E000B1A7D2 /* CurrentNetworkView.swift */; };
 		7AD8C7BC2BD27F7500B1A7D2 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8C7BB2BD27F7500B1A7D2 /* Extension+UIView.swift */; };
 		7AD8C7BF2BD2836E00B1A7D2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8C7BE2BD2836E00B1A7D2 /* Colors.xcassets */; };
+		7AD8C7C12BD2974700B1A7D2 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8C7C02BD2974700B1A7D2 /* ActionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7AD8C7B92BD270E000B1A7D2 /* CurrentNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentNetworkView.swift; sourceTree = "<group>"; };
 		7AD8C7BB2BD27F7500B1A7D2 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		7AD8C7BE2BD2836E00B1A7D2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7AD8C7C02BD2974700B1A7D2 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		7AD8C7B82BD2707500B1A7D2 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				7AD8C7C02BD2974700B1A7D2 /* ActionCell.swift */,
 				7AD8C7B92BD270E000B1A7D2 /* CurrentNetworkView.swift */,
 				7A33D3D22BC9021300EE4A73 /* MainViewController.swift */,
 				7AD8C7B12BD26A1F00B1A7D2 /* MainViewModel.swift */,
@@ -180,6 +183,7 @@
 				7AD8C7BA2BD270E000B1A7D2 /* CurrentNetworkView.swift in Sources */,
 				7AD8C7B22BD26A1F00B1A7D2 /* MainViewModel.swift in Sources */,
 				7A33D3D12BC9021300EE4A73 /* SceneDelegate.swift in Sources */,
+				7AD8C7C12BD2974700B1A7D2 /* ActionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
