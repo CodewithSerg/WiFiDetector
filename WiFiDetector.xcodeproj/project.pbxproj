@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		7A33D3CF2BC9021300EE4A73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33D3CE2BC9021300EE4A73 /* AppDelegate.swift */; };
 		7A33D3D12BC9021300EE4A73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33D3D02BC9021300EE4A73 /* SceneDelegate.swift */; };
-		7A33D3D32BC9021300EE4A73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33D3D22BC9021300EE4A73 /* ViewController.swift */; };
+		7A33D3D32BC9021300EE4A73 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33D3D22BC9021300EE4A73 /* MainViewController.swift */; };
 		7A33D3D82BC9021500EE4A73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A33D3D72BC9021500EE4A73 /* Assets.xcassets */; };
 		7A33D3DB2BC9021500EE4A73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A33D3D92BC9021500EE4A73 /* LaunchScreen.storyboard */; };
+		7AD8C7B22BD26A1F00B1A7D2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8C7B12BD26A1F00B1A7D2 /* MainViewModel.swift */; };
+		7AD8C7B52BD26CB000B1A7D2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD8C7B42BD26CB000B1A7D2 /* SnapKit */; };
+		7AD8C7B72BD26CB000B1A7D2 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD8C7B62BD26CB000B1A7D2 /* SnapKit-Dynamic */; };
+		7AD8C7BA2BD270E000B1A7D2 /* CurrentNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8C7B92BD270E000B1A7D2 /* CurrentNetworkView.swift */; };
+		7AD8C7BC2BD27F7500B1A7D2 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8C7BB2BD27F7500B1A7D2 /* Extension+UIView.swift */; };
+		7AD8C7BF2BD2836E00B1A7D2 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8C7BE2BD2836E00B1A7D2 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A33D3CB2BC9021300EE4A73 /* WiFiDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFiDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A33D3CE2BC9021300EE4A73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A33D3D02BC9021300EE4A73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7A33D3D22BC9021300EE4A73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A33D3D22BC9021300EE4A73 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7A33D3D72BC9021500EE4A73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A33D3DA2BC9021500EE4A73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A33D3DC2BC9021500EE4A73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7AD8C7B12BD26A1F00B1A7D2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		7AD8C7B92BD270E000B1A7D2 /* CurrentNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentNetworkView.swift; sourceTree = "<group>"; };
+		7AD8C7BB2BD27F7500B1A7D2 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		7AD8C7BE2BD2836E00B1A7D2 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD8C7B52BD26CB000B1A7D2 /* SnapKit in Frameworks */,
+				7AD8C7B72BD26CB000B1A7D2 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +66,34 @@
 		7A33D3CD2BC9021300EE4A73 /* WiFiDetector */ = {
 			isa = PBXGroup;
 			children = (
+				7AD8C7BD2BD27FA400B1A7D2 /* Extensions */,
+				7AD8C7B82BD2707500B1A7D2 /* MainScreen */,
 				7A33D3CE2BC9021300EE4A73 /* AppDelegate.swift */,
 				7A33D3D02BC9021300EE4A73 /* SceneDelegate.swift */,
-				7A33D3D22BC9021300EE4A73 /* ViewController.swift */,
 				7A33D3D72BC9021500EE4A73 /* Assets.xcassets */,
+				7AD8C7BE2BD2836E00B1A7D2 /* Colors.xcassets */,
 				7A33D3D92BC9021500EE4A73 /* LaunchScreen.storyboard */,
 				7A33D3DC2BC9021500EE4A73 /* Info.plist */,
 			);
 			path = WiFiDetector;
+			sourceTree = "<group>";
+		};
+		7AD8C7B82BD2707500B1A7D2 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7AD8C7B92BD270E000B1A7D2 /* CurrentNetworkView.swift */,
+				7A33D3D22BC9021300EE4A73 /* MainViewController.swift */,
+				7AD8C7B12BD26A1F00B1A7D2 /* MainViewModel.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		7AD8C7BD2BD27FA400B1A7D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7AD8C7BB2BD27F7500B1A7D2 /* Extension+UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +112,10 @@
 			dependencies = (
 			);
 			name = WiFiDetector;
+			packageProductDependencies = (
+				7AD8C7B42BD26CB000B1A7D2 /* SnapKit */,
+				7AD8C7B62BD26CB000B1A7D2 /* SnapKit-Dynamic */,
+			);
 			productName = WiFiDetector;
 			productReference = 7A33D3CB2BC9021300EE4A73 /* WiFiDetector.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +144,9 @@
 				Base,
 			);
 			mainGroup = 7A33D3C22BC9021300EE4A73;
+			packageReferences = (
+				7AD8C7B32BD26CB000B1A7D2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 7A33D3CC2BC9021300EE4A73 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD8C7BF2BD2836E00B1A7D2 /* Colors.xcassets in Resources */,
 				7A33D3DB2BC9021500EE4A73 /* LaunchScreen.storyboard in Resources */,
 				7A33D3D82BC9021500EE4A73 /* Assets.xcassets in Resources */,
 			);
@@ -134,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A33D3D32BC9021300EE4A73 /* ViewController.swift in Sources */,
+				7A33D3D32BC9021300EE4A73 /* MainViewController.swift in Sources */,
 				7A33D3CF2BC9021300EE4A73 /* AppDelegate.swift in Sources */,
+				7AD8C7BC2BD27F7500B1A7D2 /* Extension+UIView.swift in Sources */,
+				7AD8C7BA2BD270E000B1A7D2 /* CurrentNetworkView.swift in Sources */,
+				7AD8C7B22BD26A1F00B1A7D2 /* MainViewModel.swift in Sources */,
 				7A33D3D12BC9021300EE4A73 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +387,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7AD8C7B32BD26CB000B1A7D2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7AD8C7B42BD26CB000B1A7D2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AD8C7B32BD26CB000B1A7D2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		7AD8C7B62BD26CB000B1A7D2 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AD8C7B32BD26CB000B1A7D2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7A33D3C32BC9021300EE4A73 /* Project object */;
 }
