@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
 		let layout = UICollectionViewFlowLayout()
 		layout.scrollDirection = .vertical
 		layout.minimumInteritemSpacing = 12
-		layout.minimumLineSpacing = 30
+		layout.minimumLineSpacing = 15
 		return layout
 	}()
 
@@ -46,6 +46,8 @@ class MainViewController: UIViewController {
 		imageView.contentMode = .scaleAspectFit
 		return imageView
 	}()
+
+	let viewModel = MainViewModel()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -95,12 +97,13 @@ extension MainViewController: UICollectionViewDelegate {
 
 extension MainViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		4
+		viewModel.cells.count
 	}
 
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "actionCell", for: indexPath) as? ActionCell
-		cell?.configure(type: .bluetooth, imageStr: "bluetooth")
+		let model = viewModel.cells[indexPath.row]
+		cell?.configure(model: model)
 		cell?.action = { [weak self] type in
 //			vm.didTap()
 			print(">>> tap cell \(type)")

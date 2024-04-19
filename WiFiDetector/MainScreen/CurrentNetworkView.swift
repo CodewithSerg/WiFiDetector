@@ -54,6 +54,7 @@ final class CurrentNetworkView: UIView {
 		button.setTitle("Scan Current Network", for: .normal)
 		button.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
 		button.layer.cornerRadius = 25
+		button.backgroundColor = UIColor(named: "#6D59D3")
 		button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
 		return button
 	}()

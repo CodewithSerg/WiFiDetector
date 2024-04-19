@@ -27,6 +27,7 @@ final class ActionCell: UICollectionViewCell {
 
 	private let label: UILabel = {
 		let label = UILabel()
+		label.numberOfLines = .zero
 		label.textColor = .gray
 		label.textAlignment = .center
 		return label
@@ -73,8 +74,9 @@ final class ActionCell: UICollectionViewCell {
 		}
 	}
 
-	func configure(type: CellType, imageStr: String) {
-		self.type = type
-		imageView.image = UIImage(named: imageStr)
+	func configure(model: ActionCellModel) {
+		self.type = model.cellType
+		label.text = model.title
+		imageView.image = UIImage(named: model.imageStr)
 	}
 }

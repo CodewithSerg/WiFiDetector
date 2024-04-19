@@ -8,5 +8,22 @@
 import Foundation
 
 final class MainViewModel {
-	
+
+	let cells: [ActionCellModel] = [
+		ActionCellModel(cellType: .bluetooth, title: "Bluetooth\nDetection", imageStr: "bluetooth"),
+		ActionCellModel(cellType: .infrared, title: "Infrared\nDetection", imageStr: "infrared"),
+		ActionCellModel(cellType: .magnetic, title: "Magnetic\nDetection", imageStr: "magnetic"),
+		ActionCellModel(cellType: .tips, title: "Antispy\nTips", imageStr: "tips")
+	]
+
+	init() {
+
+	}
+
+}
+
+struct ActionCellModel {
+	let cellType: CellType
+	let title: String
+	let imageStr: String
 }
