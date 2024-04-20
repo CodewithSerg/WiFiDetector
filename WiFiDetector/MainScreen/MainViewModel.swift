@@ -20,6 +20,10 @@ final class MainViewModel {
 
 	}
 
+	func showSearch() {
+		
+	}
+
 }
 
 struct ActionCellModel {

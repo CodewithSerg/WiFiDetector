@@ -10,7 +10,7 @@ import SnapKit
 
 // MARK: - MainViewController
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITableViewDelegate {
 
 	lazy var layout: UICollectionViewFlowLayout = {
 		let layout = UICollectionViewFlowLayout()
@@ -51,7 +51,13 @@ class MainViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		title = "Main Screen"
+		navigationController?.navigationBar.isHidden = false
 		setupUI()
+		currentNetworkView.buttonAction = { [weak self] in
+			let searchVC = SearchViewController()
+			self?.navigationController?.pushViewController(searchVC, animated: true)
+		}
 	}
 
 	override func viewWillLayoutSubviews() {
