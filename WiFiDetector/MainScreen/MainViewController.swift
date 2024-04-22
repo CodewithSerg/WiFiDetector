@@ -52,7 +52,6 @@ class MainViewController: UIViewController, UITableViewDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		title = "Main Screen"
-		navigationController?.navigationBar.isHidden = false
 		setupUI()
 		currentNetworkView.buttonAction = { [weak self] in
 			let searchVC = SearchViewController()

@@ -114,6 +114,8 @@ final class SearchViewController: UIViewController {
 
 	@objc private func didTouchButton() {
 		print(">>> serrch tapped")
+		let resultVC = ResultSearchScreenController()
+		navigationController?.pushViewController(resultVC, animated: true)
 	}
 
 }
